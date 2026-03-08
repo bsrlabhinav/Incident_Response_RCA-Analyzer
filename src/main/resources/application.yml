@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: incident-response
+  elasticsearch:
+    uris: http://localhost:9200
+
+incident:
+  sla:
+    critical:
+      acknowledge-ms: 5000
+      resolution-ms: 10000
+    high:
+      acknowledge-ms: 30000
+      resolution-ms: 60000
+    medium:
+      acknowledge-ms: 300000
+      resolution-ms: 900000
+    low:
+      acknowledge-ms: 3600000
+      resolution-ms: 86400000
+
+logging:
+  level:
+    org.example.incidentresponse: DEBUG
+    org.springframework.data.elasticsearch: DEBUG
